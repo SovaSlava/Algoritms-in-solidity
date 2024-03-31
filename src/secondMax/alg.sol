@@ -7,7 +7,7 @@ contract Alg {
         if(arr.length < 2) return 0;
         uint firstMax = arr[0] > arr[1] ? arr[0]: arr[1];
         secondMax = arr[0] > arr[1] ? arr[1]: arr[0];
-        for(uint i; i < arr.length; i++) {
+        for(uint i=2; i < arr.length; i++) {
             if(arr[i] > firstMax) {
                 secondMax = firstMax;
                 firstMax = arr[i];

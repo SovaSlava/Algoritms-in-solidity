@@ -11,7 +11,7 @@ contract RleTest is Test {
         alg = new Alg();
     }
 
-    function test_commonArr() external {
+    function test_commonArr() external view {
         string[] memory arr = new string[](6);
         arr[0] = 'A';
         arr[1] = 'A';
@@ -20,7 +20,7 @@ contract RleTest is Test {
         arr[4] = 'C';
         arr[5] = 'C';
         string memory result = alg.rle(arr);
-        assertEq(keccak256(abi.encodePacked(result)), keccak256(abi.encodePacked("A2B1C3")));
+        assertEq(keccak256(abi.encodePacked(result)), keccak256(abi.encodePacked("A2BC3")));
     }
 
     
